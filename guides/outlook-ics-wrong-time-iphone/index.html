@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outlook .ics events show the wrong time on iPhone</title>
+<meta name="description" content="Events from Outlook or Exchange .ics files land hours off in iPhone Calendar. The cause is Windows time zone names like &quot;Pacific Standard Time&quot;. How to check and fix it.">
+<meta name="apple-itunes-app" content="app-id=6813216187">
+<link rel="canonical" href="https://iflora84.github.io/ics-import-privacy/guides/outlook-ics-wrong-time-iphone/">
+<link rel="stylesheet" href="../../site.css">
+</head><body>
+<header>
+<nav class="crumbs"><a href="../../">ICS Import</a> › Guides</nav>
+<h1>Outlook .ics events show the wrong time on iPhone</h1>
+<p class="lead">You imported an invite or schedule exported from Outlook, and every event is a few hours early or late. The file isn't broken. It uses time zone names iOS doesn't always recognize.</p>
+</header>
+<main>
+<h2>The cause</h2>
+<p>Every timed event in an <code>.ics</code> file carries a time zone. Apple Calendar expects standard names like <code>America/Los_Angeles</code>. Outlook and Exchange often write Windows names instead:</p>
+<div class="card"><p><code>DTSTART;TZID=Pacific Standard Time:20261005T100000</code><br><code>DTSTART;TZID="(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi":20261005T100000</code></p></div>
+<p>When the name isn't recognized, the event can be read in the wrong zone, and it shifts by the difference between the two.</p>
+
+<h2>Check the file</h2>
+<ol>
+<li>Open the <code>.ics</code> file in a text editor on a computer (Notepad or TextEdit)</li>
+<li>Search for <code>TZID=</code></li>
+<li>If the value after it is a Windows name or a "(UTC±hh:mm)" label, that's the cause</li>
+</ol>
+
+<h2>Fix it by hand</h2>
+<ol>
+<li>Replace each Windows name with its standard name, for example <code>Pacific Standard Time</code> → <code>America/Los_Angeles</code>, <code>Eastern Standard Time</code> → <code>America/New_York</code>, <code>China Standard Time</code> → <code>Asia/Shanghai</code>, <code>W. Europe Standard Time</code> → <code>Europe/Berlin</code></li>
+<li>Replace it in the <code>TZID:</code> line of the <code>VTIMEZONE</code> block too</li>
+<li>Save and open the file again on your iPhone</li>
+</ol>
+<p>Also check Settings › Calendar › Time Zone Override. If it's on and set to another city, all events are shown in that zone.</p>
+
+<h2>Or let an app do it</h2>
+<p><a href="https://apps.apple.com/app/id6813216187">ICS Import</a>, which I built, maps Windows time zone names and "(UTC+hh:mm)" labels to the right zone before adding events, and shows each event's time so you can check it first. It's free for up to 3 events per import, with a one-time purchase for unlimited.</p>
+<a class="cta" href="https://apps.apple.com/app/id6813216187">Get ICS Import</a>
+<p class="small">If a file still comes out wrong, email <a href="mailto:zhenyitong84@gmail.com?subject=ICS%20time%20zone">zhenyitong84@gmail.com</a> with the file and the zone gets added.</p>
+</main>
+<footer><a href="../../">ICS Import</a> · <a href="../ics-file-wont-add-to-iphone-calendar/">iPhone won't add an .ics file</a> · <a href="../../#privacy">Privacy</a></footer>
+</body></html>

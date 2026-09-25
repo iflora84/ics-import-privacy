@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>iPhone won't add an .ics file to Calendar: every fix</title>
+<meta name="description" content="Why your iPhone shows an .ics file but has no Add to Calendar button, and five ways to get the events into Apple Calendar: Mail, Safari, subscriptions, a computer, or an app.">
+<meta name="apple-itunes-app" content="app-id=6813216187">
+<link rel="canonical" href="https://iflora84.github.io/ics-import-privacy/guides/ics-file-wont-add-to-iphone-calendar/">
+<link rel="stylesheet" href="../../site.css">
+</head><body>
+<header>
+<nav class="crumbs"><a href="../../">ICS Import</a> › Guides</nav>
+<h1>iPhone won't add an .ics file to Calendar: every fix</h1>
+<p class="lead">You got a class timetable, a match schedule or a meeting invite as an <code>.ics</code> file. The iPhone shows it, but there's no way to put it in Calendar. Here's why, and what works.</p>
+</header>
+<main>
+<h2>Why it happens</h2>
+<p>iOS only offers "Add to Calendar" when the file is opened by an app that knows how to hand it to Calendar, mainly Apple Mail and Safari. Most other apps just pass the file to the share sheet, and the share sheet has no Calendar option:</p>
+<ul>
+<li><strong>Gmail, Outlook, Spark</strong>: attachments open in a preview or the share sheet</li>
+<li><strong>WhatsApp, Telegram, Messages</strong>: the file is treated as a generic document</li>
+<li><strong>Files app</strong>: shows a text preview of the file, with no Add button</li>
+</ul>
+<p>Even when iOS can open the file, some files fail: times hours off (Outlook/Exchange time zone names), or updated invites that don't replace the old event.</p>
+
+<h2>Fix 1: open it in Apple Mail</h2>
+<p>If the file came by email, forward it to an address you read in Apple's Mail app, then tap the attachment there. Mail usually shows the events with an Add button. This works well for a single invite.</p>
+
+<h2>Fix 2: open the link in Safari</h2>
+<p>If the <code>.ics</code> file is a download link on a website (course portals, sports clubs, ticket sites), long-press the link and open it in Safari rather than in an in-app browser. Safari offers to add the events.</p>
+
+<h2>Fix 3: subscribe instead of importing</h2>
+<p>If you were given a URL (often starting with <code>webcal://</code> or ending in <code>.ics</code>) rather than a file, subscribe to it so it keeps updating: Settings › Calendar › Accounts › Add Account › Other › Add Subscribed Calendar. On iOS 18 and later, Calendar is under Settings › Apps.</p>
+
+<h2>Fix 4: import on a computer</h2>
+<ul>
+<li><strong>Mac</strong>: open the file in Calendar, or use File › Import, and pick an iCloud calendar. It syncs to your iPhone.</li>
+<li><strong>Windows or any browser</strong>: in Google Calendar on the web, open Settings › Import &amp; export and import the file. If your Google account is added to the iPhone (Settings › Calendar › Accounts), the events show up there.</li>
+</ul>
+
+<h2>Fix 5: use an app that imports the file directly</h2>
+<p>I built <a href="https://apps.apple.com/app/id6813216187">ICS Import</a> for exactly this. Tap the file in any app, tap Share, pick ICS Import, choose the events and the calendar, and tap Add. It reads Outlook/Exchange time zones correctly, keeps repeat rules and reminders, and skips events you already added. Everything happens on the phone, with no account.</p>
+<p>It's free for up to 3 events per import, which covers most invites. A one-time purchase removes the limit for big files like a semester timetable.</p>
+<a class="cta" href="https://apps.apple.com/app/id6813216187">Get ICS Import</a>
+
+<h2>Still stuck?</h2>
+<p>Email <a href="mailto:zhenyitong84@gmail.com?subject=ICS%20file%20help">zhenyitong84@gmail.com</a> with the file attached and I'll take a look.</p>
+</main>
+<footer><a href="../../">ICS Import</a> · <a href="../outlook-ics-wrong-time-iphone/">Outlook .ics wrong time on iPhone</a> · <a href="../../#privacy">Privacy</a></footer>
+</body></html>
