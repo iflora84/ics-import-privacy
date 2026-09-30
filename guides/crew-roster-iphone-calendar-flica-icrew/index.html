@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FLICA or iCrew roster in iPhone Calendar, without duplicates</title>
+<meta name="description" content="Put your FLICA or Delta iCrew schedule export (.ics) in iPhone Calendar, and re-import it after trades and drops without duplicate trips or dropped trips left behind. No crew login shared with any app.">
+<meta name="apple-itunes-app" content="app-id=6813216187">
+<link rel="canonical" href="https://iflora84.github.io/ics-import-privacy/guides/crew-roster-iphone-calendar-flica-icrew/">
+<link rel="stylesheet" href="../../site.css">
+</head><body>
+<header>
+<nav class="crumbs"><a href="../../">ICS Import</a> › Guides</nav>
+<h1>FLICA or iCrew roster in iPhone Calendar, without duplicates</h1>
+<p class="lead">You download your schedule as an <code>.ics</code> file, add it to your iPhone, and then you trade a trip, drop one or pick one up. Download it again, add it again, and your calendar now has doubled trips and trips you no longer fly. Here's how to keep it clean.</p>
+</header>
+<main>
+<h2>Why re-importing a roster goes wrong</h2>
+<p>An <code>.ics</code> file only adds events. Nothing on the iPhone knows the new download replaces the old one, so every re-import stacks on top of the last. Crew apps run into the same limit. CrewLounge's own help says a second ICS export "creates double events in your calendar", and that you have to delete everything by hand before importing again. Flight Crew View's help says that without full calendar access, dropped trips can't be deleted.</p>
+
+<h2>Why a file instead of a roster app login</h2>
+<p>Many roster apps work by logging in to the crew portal with your username and password. Airlines and FLICA have been moving to block that. Flight Crew View now asks FLICA users to log in in Safari themselves and export the <code>.ics</code> file, and some pilot groups have been told that handing credentials to a third party breaks the company's security rules. Downloading the file yourself, from your own login, avoids that question entirely.</p>
+
+<h2>Step 1: download the schedule file</h2>
+<ul>
+<li><strong>FLICA</strong> (used by Alaska, Hawaiian, JetBlue, Frontier, Endeavor, Republic, PSA, WestJet and others): log in to the FLICA website in Safari and use its calendar or <code>.ics</code> export for the month.</li>
+<li><strong>Delta iCrew</strong>: use Download Schedule on the iCrew website.</li>
+<li><strong>Any other system</strong> that gives you an <code>.ics</code> file works the same way. A PDF roster doesn't: it has to be an <code>.ics</code> file.</li>
+</ul>
+<p>On iPhone the file usually lands in Downloads in the Files app. If you download it on a computer, email it to yourself or AirDrop it to the phone.</p>
+
+<h2>Step 2: import it</h2>
+<ol>
+<li>Tap the <code>.ics</code> file in Files or Mail, tap Share, then <a href="https://apps.apple.com/app/apple-store/id6813216187?pt=129470668&amp;ct=web-crew-guide&amp;mt=8">ICS Import</a>.</li>
+<li>Pick a calendar. A calendar of its own, like "Trips", lets you hide your roster in one tap or share it with family.</li>
+<li>Tap Add.</li>
+</ol>
+
+<h2>Step 3: after a trade, drop or pickup, import the new file</h2>
+<ol>
+<li>Download the schedule again and open it in ICS Import the same way.</li>
+<li>ICS Import shows "New version of" your earlier import, with how many trips are new, changed, removed and unchanged. If Replace is off, turn on "Replace the earlier version". Removed trips are listed, so you can check them before anything is deleted.</li>
+<li>Tap Update Calendar.</li>
+</ol>
+<div class="shots">
+<img src="../../img/list.jpg" width="440" height="956" alt="A new version of a roster: 1 new, 1 changed, 1 removed, 10 unchanged">
+</div>
+<p>Only new, changed and removed events are touched. Unchanged trips keep any reminders or notes you added. Only the dates the new file covers are affected, so importing next month's schedule never deletes this month's. If an import goes wrong, Undo removes everything it added.</p>
+<a class="cta" href="https://apps.apple.com/app/apple-store/id6813216187?pt=129470668&amp;ct=web-crew-guide&amp;mt=8">Get ICS Import</a>
+<p class="small">Adding up to 3 events per import and Undo are free. Whole rosters and Replace are one purchase, no subscription. The file is read on your phone, nothing is uploaded, and there's no account.</p>
+
+<h2>Keep times right when you cross time zones</h2>
+<p>iPhone Calendar shows events in the time zone you're in, so report times move when you land somewhere else. To keep everything in your base time, turn on Time Zone Override and pick your base: Settings › Calendar › Time Zone Override (on iOS 18 and later, Settings › Apps › Calendar).</p>
+
+<h2>Still stuck?</h2>
+<p>If your schedule file doesn't come through right, email <a href="mailto:mybosseatpoop@gmail.com?subject=Crew%20roster%20file">mybosseatpoop@gmail.com</a> with the file attached (remove anything you'd rather not share) and I'll fix the import.</p>
+</main>
+<footer><a href="../../">ICS Import</a> · <a href="../update-roster-iphone-calendar-without-duplicates/">Update a roster without duplicates</a> · <a href="../outlook-ics-wrong-time-iphone/">Outlook .ics wrong time on iPhone</a> · <a href="../../#privacy">Privacy</a></footer>
+</body></html>
