@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Update a roster in iPhone Calendar without duplicates</title>
+<meta name="description" content="Your roster, rota or timetable changed and you got a new .ics file. How to get the new version into iPhone Calendar without duplicate shifts, and without old shifts that were dropped staying behind.">
+<meta name="apple-itunes-app" content="app-id=6813216187">
+<link rel="canonical" href="https://iflora84.github.io/ics-import-privacy/guides/update-roster-iphone-calendar-without-duplicates/">
+<link rel="stylesheet" href="../../site.css">
+</head><body>
+<header>
+<nav class="crumbs"><a href="../../">ICS Import</a> › Guides</nav>
+<h1>Update a roster in iPhone Calendar without duplicates</h1>
+<p class="lead">You put your roster, rota or class timetable in Calendar. Then it changed: a swapped shift, a cancelled trip, a moved lecture. The new <code>.ics</code> file arrived, and adding it on top of the old one leaves a mess. Here's how to swap one version for the other cleanly.</p>
+</header>
+<main>
+<h2>Why re-adding the file goes wrong</h2>
+<p>Adding an <code>.ics</code> file only ever adds events. Nothing on the iPhone compares it with the version you added last time, so:</p>
+<ul>
+<li><strong>Shifts that were dropped stay in your calendar.</strong> The new file simply doesn't mention them, and nothing deletes them.</li>
+<li><strong>Moved shifts can show up twice</strong>: at the old time and at the new one.</li>
+<li><strong>Unchanged shifts can end up duplicated</strong>, depending on the app that adds the file.</li>
+</ul>
+<p>The more often the schedule changes, the worse it gets. Crew, nurses, doctors and anyone on a rota that's published monthly and then amended runs into this.</p>
+
+<h2>Option 1: subscribe, if you're given a link</h2>
+<p>If your employer, rostering app or university gives you a calendar <em>link</em> (it often starts with <code>webcal://</code> or ends in <code>.ics</code>), subscribe to it instead of importing a file. The calendar then updates itself: Settings › Calendar › Accounts › Add Account › Other › Add Subscribed Calendar. On iOS 18 and later, Calendar is under Settings › Apps.</p>
+<p>Subscribed calendars are read-only, refresh on their own schedule (sometimes hours late) and can't hold your own notes or reminders. If you only get a file, or the feed isn't reliable, read on.</p>
+
+<h2>Option 2: give the schedule its own calendar and rebuild it</h2>
+<p>Free, and it works with any file:</p>
+<ol>
+<li>In Calendar, tap Calendars, then Add Calendar, and name it after the schedule, like "Roster".</li>
+<li>Always add the schedule's file to that calendar and nothing else.</li>
+<li>When a new version arrives, delete that calendar (Calendars › the ⓘ next to it › Delete Calendar), create it again, and add the new file.</li>
+</ol>
+<p>The downside: everything in that calendar goes, including past months, reminders you set on shifts, and anything you added by hand. It also doesn't show you what actually changed.</p>
+
+<h2>Option 3: replace only what changed</h2>
+<p>I built <a href="https://apps.apple.com/app/id6813216187">ICS Import</a> for this. Open the new version of the file and it recognises the schedule you imported before:</p>
+<ol>
+<li>Tap the new <code>.ics</code> file in Mail, Gmail, Outlook, WhatsApp or Files, tap Share, then ICS Import.</li>
+<li>ICS Import shows "New version of" your earlier import, with a count of new, changed, removed and unchanged events. Removed shifts are listed so you can check them first.</li>
+<li>Tap Update Calendar.</li>
+</ol>
+<div class="shots">
+<img src="../../img/list.jpg" width="440" height="956" alt="A new version of a roster: 1 new, 1 changed, 1 removed, 10 unchanged">
+</div>
+<p>Only new, changed and removed events are touched. Unchanged shifts stay exactly as they are, with your reminders and edits. Only the dates the new file covers are affected, so importing next month's roster never deletes this month's. If something looks wrong, Undo in the app removes everything an import added.</p>
+<p>It reads the file on your phone, with no airline, hospital or school login and no account. Adding up to 3 events per import and Undo are free. Replacing a whole schedule is a one-time purchase, with no subscription.</p>
+<a class="cta" href="https://apps.apple.com/app/id6813216187">Get ICS Import</a>
+
+<h2>Tips for rosters that change a lot</h2>
+<ul>
+<li><strong>Keep the file name the same</strong> if you rename files before importing. ICS Import uses the events' IDs and the file name to spot a new version of the same schedule.</li>
+<li><strong>Night shifts</strong> that cross midnight keep their real start and end, and repeating events keep their repeat rules and skipped dates.</li>
+<li><strong>Times hours off?</strong> Files from Outlook or Exchange often use Windows time zone names. See <a href="../outlook-ics-wrong-time-iphone/">Outlook .ics events show the wrong time on iPhone</a>.</li>
+</ul>
+
+<h2>Still stuck?</h2>
+<p>Email <a href="mailto:mybosseatpoop@gmail.com?subject=Roster%20update%20help">mybosseatpoop@gmail.com</a> with both versions of the file attached and I'll take a look.</p>
+</main>
+<footer><a href="../../">ICS Import</a> · <a href="../ics-file-wont-add-to-iphone-calendar/">iPhone won't add an .ics file</a> · <a href="../outlook-ics-wrong-time-iphone/">Outlook .ics wrong time on iPhone</a> · <a href="../../#privacy">Privacy</a></footer>
+</body></html>
