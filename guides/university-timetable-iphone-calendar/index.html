@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>University or school timetable in iPhone Calendar (Canvas, Moodle, Blackboard)</title>
+<meta name="description" content="How to put a class timetable from Canvas, Moodle, Blackboard, Brightspace or your university's timetable system into iPhone Calendar, when to subscribe and when to import the .ics file, and how to update it mid-term without duplicate classes.">
+<meta name="apple-itunes-app" content="app-id=6813216187">
+<link rel="canonical" href="https://iflora84.github.io/ics-import-privacy/guides/university-timetable-iphone-calendar/">
+<link rel="stylesheet" href="../../site.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","dateModified":"2026-10-06","mainEntity":[
+{"@type":"Question","name":"How do I add my university timetable to my iPhone calendar?","acceptedAnswer":{"@type":"Answer","text":"If your university or learning platform gives you a calendar link (webcal:// or a URL ending in .ics), subscribe to it: Settings › Calendar › Accounts › Add Account › Other › Add Subscribed Calendar (on iOS 18 and later, Settings › Apps › Calendar). If you only get a downloaded .ics file, import it into a calendar of its own, and use an app such as ICS Import to replace it with the next version without duplicate classes."}},
+{"@type":"Question","name":"Should I subscribe to my timetable or import the .ics file?","acceptedAnswer":{"@type":"Answer","text":"Subscribe when you have a link: the calendar then updates itself, though it is read-only and can refresh hours late. Import the file when you only get a download, when the feed is unreliable, or when you want to add your own notes and reminders to classes."}},
+{"@type":"Question","name":"Why are my classes duplicated after importing the timetable again?","acceptedAnswer":{"@type":"Answer","text":"Adding an .ics file only ever adds events. iPhone Calendar does not compare it with the version you added before, so re-importing a changed timetable stacks a second copy on top and leaves cancelled classes behind. Either delete the timetable's calendar and import again, or use ICS Import, which replaces only the classes that changed."}},
+{"@type":"Question","name":"How do I remove an imported timetable from iPhone Calendar?","acceptedAnswer":{"@type":"Answer","text":"If you imported it into a calendar of its own, delete that calendar: Calendars › the info button next to it › Delete Calendar. If you imported it with ICS Import, use Undo on that import, which removes everything it added and nothing else."}}
+]}
+</script>
+</head><body>
+<header>
+<nav class="crumbs"><a href="../../">ICS Import</a> › Guides</nav>
+<h1>University or school timetable in iPhone Calendar</h1>
+<p class="lead">Your class timetable comes from Canvas, Moodle, Blackboard, Brightspace or your university's timetable system. Here's how to get it into iPhone Calendar, and how to keep it right when rooms and times change mid-term.</p>
+<div class="card">
+<p><strong>Short answer.</strong> If you're given a calendar <em>link</em>, subscribe to it in Settings and it updates itself. If you only get a downloaded <code>.ics</code> <em>file</em>, import it into a calendar of its own. When a new version of the file arrives, don't add it on top of the old one: that duplicates classes and leaves cancelled ones behind. Either delete the calendar and import again, or use <a href="https://apps.apple.com/app/apple-store/id6813216187?pt=129470668&amp;ct=web-timetable-guide&amp;mt=8">ICS Import</a> to replace only what changed.</p>
+</div>
+<p class="small">Updated 6 October 2026. Settings paths are for iOS 17 and iOS 18 or later.</p>
+</header>
+<main>
+<h2>Step 1: find the calendar link or file</h2>
+<ul>
+<li><strong>Canvas</strong>: open Calendar in the left-hand menu, then click Calendar Feed (bottom right) and copy the link. The feed holds assignments and course events. Your class timetable may come from a separate university system.</li>
+<li><strong>Moodle</strong>: open the Calendar, then Import or export calendars › Export calendar. Choose the events and time period, then use Get calendar URL for a link or Export for a file.</li>
+<li><strong>Brightspace (D2L)</strong>: open Calendar and use Subscribe to get a link.</li>
+<li><strong>Blackboard</strong>: open Calendar and look in its settings for the option to share or sync the calendar. It gives you a link.</li>
+<li><strong>University timetable systems</strong> (often a separate "My timetable" page): look for Subscribe, Add to calendar, iCal or Download <code>.ics</code>.</li>
+</ul>
+<p>A link usually starts with <code>webcal://</code> or <code>https://</code> and often ends in <code>.ics</code>. A file is something you download, usually into Downloads in the Files app. A PDF timetable can't go into Calendar this way.</p>
+
+<h2>Step 2a: you have a link, so subscribe</h2>
+<ol>
+<li>Copy the link.</li>
+<li>Go to Settings › Calendar › Accounts › Add Account › Other › Add Subscribed Calendar. On iOS 18 and later, Calendar is under Settings › Apps.</li>
+<li>Paste the link and tap Next, then Save.</li>
+</ol>
+<p>The calendar now updates itself, so you don't need an app. The catch: subscribed calendars are read-only, refresh on Apple's schedule (sometimes hours late), and you can't add your own notes or reminders to classes. Some exports, like Moodle's, also only cover the period you picked.</p>
+
+<h2>Step 2b: you have a file, so import it into its own calendar</h2>
+<ol>
+<li>In Calendar, tap Calendars › Add Calendar, and name it after the timetable, like "Classes".</li>
+<li>Tap the <code>.ics</code> file in Files, Mail or Outlook, tap Share, then <a href="https://apps.apple.com/app/apple-store/id6813216187?pt=129470668&amp;ct=web-timetable-guide&amp;mt=8">ICS Import</a>.</li>
+<li>Pick the "Classes" calendar and tap Add.</li>
+</ol>
+<p>A calendar of its own lets you hide the whole timetable in one tap or remove it at the end of term. If iPhone opens the file but won't add the events, see <a href="../ics-file-wont-add-to-iphone-calendar/">iPhone won't add an .ics file to Calendar</a>.</p>
+
+<h2>Step 3: the timetable changed, so replace it</h2>
+<p>A room moves, a lecture is cancelled, a new term starts, and you get a new file. Adding it on top of the old one doubles every class and leaves cancelled ones in your calendar, because adding an <code>.ics</code> file only ever adds events.</p>
+<p><strong>Free way:</strong> delete the "Classes" calendar (Calendars › ⓘ › Delete Calendar), create it again, and import the new file. You lose any reminders or notes you added to classes.</p>
+<p><strong>With ICS Import:</strong> open the new file the same way. ICS Import recognises it as a new version of your timetable and shows how many classes are new, changed, removed and unchanged. Tap Update Calendar.</p>
+<div class="shots">
+<img src="../../img/list.jpg" width="440" height="956" alt="A new version of a schedule: 1 new, 1 changed, 1 removed, 10 unchanged">
+</div>
+<p>Only new, changed and removed classes are touched. Unchanged ones keep your reminders and notes. Only the dates the new file covers are affected, so importing next term never deletes this term. If an import goes wrong, Undo removes everything it added.</p>
+<a class="cta" href="https://apps.apple.com/app/apple-store/id6813216187?pt=129470668&amp;ct=web-timetable-guide&amp;mt=8">Get ICS Import</a>
+<p class="small">I built ICS Import. Adding up to 3 events per import and Undo are free. Whole timetables and Replace are one purchase, no subscription. The file is read on your phone, there's no university login and no account, and nothing is uploaded.</p>
+
+<h2>Common questions</h2>
+<h3>How do I add my university timetable to my iPhone calendar?</h3>
+<p>If your university or learning platform gives you a calendar link, subscribe to it (Step 2a). If you only get a downloaded <code>.ics</code> file, import it into a calendar of its own (Step 2b), and replace it with the next version instead of adding it again (Step 3).</p>
+<h3>Should I subscribe to my timetable or import the .ics file?</h3>
+<p>Subscribe when you have a link: it updates itself, though it's read-only and can refresh hours late. Import the file when you only get a download, when the feed is unreliable, or when you want to add your own notes and reminders to classes.</p>
+<h3>Why are my classes duplicated after importing the timetable again?</h3>
+<p>Adding an <code>.ics</code> file only ever adds events. iPhone Calendar doesn't compare it with the version you added before, so re-importing a changed timetable stacks a second copy on top and leaves cancelled classes behind. Delete the timetable's calendar and import again, or use ICS Import, which replaces only the classes that changed. More in <a href="../update-roster-iphone-calendar-without-duplicates/">Update a schedule in iPhone Calendar without duplicates</a>.</p>
+<h3>How do I remove an imported timetable from iPhone Calendar?</h3>
+<p>If you imported it into a calendar of its own, delete that calendar: Calendars › ⓘ next to it › Delete Calendar. If you imported it with ICS Import, use Undo on that import. It removes everything the import added and nothing else.</p>
+<h3>My classes show at the wrong time</h3>
+<p>Timetables exported from Outlook or Exchange often use Windows time zone names that iPhone misreads. See <a href="../outlook-ics-wrong-time-iphone/">Outlook .ics events show the wrong time on iPhone</a>.</p>
+
+<h2>Still stuck?</h2>
+<p>Email <a href="mailto:mybosseatpoop@gmail.com?subject=Timetable%20file">mybosseatpoop@gmail.com</a> with the timetable file attached (remove anything you'd rather not share) and I'll take a look.</p>
+</main>
+<footer><a href="../../">ICS Import</a> · <a href="../update-roster-iphone-calendar-without-duplicates/">Update a roster without duplicates</a> · <a href="../ics-file-wont-add-to-iphone-calendar/">iPhone won't add an .ics file</a> · <a href="../../#privacy">Privacy</a></footer>
+</body></html>
